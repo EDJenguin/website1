@@ -11,7 +11,7 @@ if upload is not None:
 
     angle = st.slider(
         'Rotate image by degrees',
-        min_value=0,
+        min_value=-360,
         max_value=360,
         value=0,
         step=45,
@@ -30,3 +30,10 @@ if upload is not None:
         file_name='rotated.png',
         mime='image/png',
     )
+
+
+
+
+audio_file = st.file_uploader('upload an audio file to play', type=['mp3', 'wav'], accept_multiple_files=False)
+if audio_file is not None:
+    st.audio(audio_file)
