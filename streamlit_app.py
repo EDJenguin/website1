@@ -3,6 +3,8 @@ import io
 import streamlit as st
 from PIL import Image
 
+text = st.text('Welcome to my website! :)')
+
 upload = st.file_uploader('Please upload a png file', type='png', accept_multiple_files=False)
 
 if upload is not None:
